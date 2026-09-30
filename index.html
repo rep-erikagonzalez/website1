@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es" data-mode="dark">
+<head>
+  <script>
+    try {
+      if (localStorage.getItem("color-mode") === "light") {
+        document.documentElement.dataset.mode = "light";
+      }
+    } catch (e) {}
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Erika González — Tecnología para la vida real</title>
+  <meta name="description" content="Ingeniera de Sistemas. Software, webs y un ecosistema de IAs en construcción." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=40" />
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" data-nav>
+    <a class="brand" href="#inicio" aria-label="Erika González, inicio">
+      <span class="mark" aria-hidden="true">
+        <i></i><i></i><i></i>
+      </span>
+      Erika
+    </a>
+
+    <nav class="nav-links" aria-label="Principal">
+      <div class="drop">
+        <button class="drop-btn" aria-expanded="false">Sobre mí <span aria-hidden="true">▾</span></button>
+        <div class="drop-panel">
+          <a href="#sobre">Quién soy</a>
+          <a href="#formacion">Formación</a>
+          <a href="#mirada">Cómo veo la tecnología</a>
+        </div>
+      </div>
+      <div class="drop">
+        <button class="drop-btn" aria-expanded="false">Trabajo <span aria-hidden="true">▾</span></button>
+        <div class="drop-panel">
+          <a href="#hago">Qué hago</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#herramientas">Herramientas</a>
+        </div>
+      </div>
+      <a href="#ecosistema">Ecosistema de IAs</a>
+    </nav>
+
+    <div class="nav-end">
+      <a class="nav-quiet" href="mailto:ejgonzalez971@gmail.com">Correo</a>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar a modo claro">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5 5l1.6 1.6M17.4 17.4 19 19M19 5l-1.6 1.6M6.6 17.4 5 19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M16 3.2A8.2 8.2 0 1 0 20.8 14 6.4 6.4 0 0 1 16 3.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      </button>
+      <a class="nav-cta" href="#contacto">Hablemos</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu-full">Menú</button>
+    </div>
+  </header>
+
+  <div class="menu-full" id="menu-full" hidden>
+    <div class="menu-full-inner">
+      <a href="#sobre">Sobre mí</a>
+      <a href="#ecosistema">Ecosistema de IAs</a>
+      <a href="#hago">Qué hago</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#formacion">Formación</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" data-theme="light">
+      <div class="hero-pin">
+        <div class="hero-stage" aria-hidden="true">
+          <article class="terminal terminal-back">
+            <header class="terminal-bar">
+              <span>Hoy</span>
+              <span class="pill on">Código</span>
+              <span>Ideas</span>
+              <span>Pruebas</span>
+              <span class="grow"></span>
+              <span class="pill">en curso</span>
+            </header>
+            <p class="kicker">Lo que estoy armando</p>
+            <p class="figure">En obra</p>
+            <p class="delta up">Versión actual · en construcción</p>
+            <svg class="chart" viewBox="0 0 640 180" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#ff6eb4" stop-opacity=".45"/>
+                  <stop offset="1" stop-color="#ff6eb4" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="area" d="M0 120 C40 110 70 90 110 96 C160 104 190 70 240 74 C290 78 320 40 380 48 C430 54 470 30 520 36 C560 40 600 22 640 18 L640 180 L0 180 Z" fill="url(#fillA)"/>
+              <path class="line" d="M0 120 C40 110 70 90 110 96 C160 104 190 70 240 74 C290 78 320 40 380 48 C430 54 470 30 520 36 C560 40 600 22 640 18" fill="none" stroke="#ff7ad9" stroke-width="2.5"/>
+            </svg>
+          </article>
+          <article class="terminal terminal-front">
+            <header class="terminal-bar">
+              <span>Día a día</span>
+              <span class="muted">Ver</span>
+              <span class="pill">Aprender</span>
+              <span class="pill on">Construir</span>
+            </header>
+            <p class="kicker">El experimento</p>
+            <p class="figure neg">Día uno</p>
+            <p class="delta up">Probar · equivocarme · volver a intentar</p>
+            <svg class="chart" viewBox="0 0 640 160" preserveAspectRatio="none">
+              <path class="line dash" d="M0 90 C50 100 80 70 130 78 C180 86 220 60 270 88 C320 110 360 74 420 80 C470 86 510 40 570 55 C600 62 620 48 640 42" fill="none" stroke="#f0a0e0" stroke-width="2" stroke-dasharray="4 6"/>
+              <path class="line" d="M0 110 C40 100 90 108 140 96 C190 84 230 100 280 92 C340 80 380 96 440 70 C490 50 540 62 640 36" fill="none" stroke="#e879f9" stroke-width="2.5"/>
+              <circle cx="560" cy="52" r="4" fill="#ffe4f6"/>
+            </svg>
+          </article>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Erika González · Ingeniera de Sistemas</p>
+          <h1>
+            <span>Hola, soy Erika.</span>
+            <span>Del código a la vida real.</span>
+          </h1>
+          <span class="hero-rule" aria-hidden="true"></span>
+          <p class="lede">Software, webs y un ecosistema de IAs para la vida real. No es una empresa. Es un experimento que crece conmigo.</p>
+          <button class="scroll-cue" data-scroll="#cifras" aria-label="Bajar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9.5 12 16l7-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" id="cifras" data-theme="light">
+      <div class="marquee" aria-label="Señas del recorrido">
+        <div class="marquee-track">
+          <ul class="stat-row">
+            <li><span class="stat-icon rings"></span><div><strong>Sistemas</strong><span>ingeniería de base</span></div></li>
+            <li><span class="stat-icon orbit"></span><div><strong>Maestría</strong><span>dirección de TI</span></div></li>
+            <li><span class="stat-icon pulse"></span><div><strong>+100</strong><span>personas certificadas</span></div></li>
+            <li><span class="stat-icon dots"></span><div><strong>+9 años</strong><span>de historia conservada</span></div></li>
+            <li><span class="stat-icon rings"></span><div><strong>4 cursos</strong><span>potencia digital</span></div></li>
+            <li><span class="stat-icon orbit"></span><div><strong>En obra</strong><span>ecosistema de IAs</span></div></li>
+          </ul>
+          <ul class="stat-row" aria-hidden="true">
+            <li><span class="stat-icon rings"></span><div><strong>Sistemas</strong><span>ingeniería de base</span></div></li>
+            <li><span class="stat-icon orbit"></span><div><strong>Maestría</strong><span>dirección de TI</span></div></li>
+            <li><span class="stat-icon pulse"></span><div><strong>+100</strong><span>personas certificadas</span></div></li>
+            <li><span class="stat-icon dots"></span><div><strong>+9 años</strong><span>de historia conservada</span></div></li>
+            <li><span class="stat-icon rings"></span><div><strong>4 cursos</strong><span>potencia digital</span></div></li>
+            <li><span class="stat-icon orbit"></span><div><strong>En obra</strong><span>ecosistema de IAs</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre" data-theme="light" data-about>
+      <div class="about-top">
+        <figure class="about-photo">
+          <span class="photo-glow" aria-hidden="true"></span>
+          <img src="images/erika.png" alt="Retrato de Erika González" width="640" height="640" />
+          <svg class="photo-ring" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="47" />
+          </svg>
+        </figure>
+        <div class="about-copy">
+          <p class="eyebrow">Sobre mí</p>
+          <h2 class="about-name">
+            <span>Erika</span>
+            <span>González</span>
+          </h2>
+          <p class="about-lead" style="--d:0">Llevo años entre código, bases de datos, webs y proyectos.</p>
+          <p style="--d:1">Me gusta aprender, probar y dejar las cosas un poco más simples.</p>
+          <p class="about-quiet" style="--d:2">No tengo una fórmula. Pruebo, me equivoco y vuelvo a intentar.</p>
+        </div>
+      </div>
+      <article class="about-build" id="ecosistema">
+        <div>
+          <p class="eyebrow">En construcción</p>
+          <h2>Un ecosistema de IAs para mi día a día.</h2>
+          <p>No es una empresa. Es un experimento que crece conmigo.</p>
+        </div>
+        <ul class="about-tasks" aria-label="Una herramienta por tarea">
+          <li>Organizar</li>
+          <li>Aprender</li>
+          <li>Crear</li>
+          <li>Automatizar</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="story" id="historia" data-theme="dark">
+      <div class="story-sticky">
+        <div class="story-scenes">
+          <div class="scene scene-a is-on"></div>
+          <div class="scene scene-b"></div>
+          <div class="scene scene-c"></div>
+        </div>
+        <div class="story-copy">
+          <p class="story-index"><span data-story-index>01</span> / 03</p>
+          <h2 data-story-title>Una IA para una tarea. Otra para otra.</h2>
+          <p class="story-note" data-story-note>Pequeños asistentes para organizar, aprender, crear y quitarme lo repetitivo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform" id="hago" data-theme="ice">
+      <h2 class="platform-title">Qué hago cuando la tecnología tiene que servir de algo</h2>
+      <article class="feature-card feature-wide">
+        <div class="feature-art art-planes" aria-hidden="true">
+          <i></i><i></i><i></i>
+          <span class="badge-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 7h14M5 12h14M5 17h10" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div class="feature-body">
+          <h3>Software y sitios que alguien va a abrir</h3>
+          <ul class="cols-3">
+            <li>Desarrollo web y soluciones digitales</li>
+            <li>Páginas y landings para proyectos reales</li>
+            <li>De la idea a algo que se puede usar</li>
+          </ul>
+        </div>
+      </article>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-art art-lattice" aria-hidden="true">
+            <span class="badge-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 4v16M5 8l7 4 7-4M5 16l7-4 7 4" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="feature-body">
+            <h3>Sistemas que se hablan</h3>
+            <ul>
+              <li>APIs e integraciones entre herramientas</li>
+              <li>Plan, seguimiento y liderazgo técnico</li>
+              <li>Que el proceso deje de enredarse</li>
+            </ul>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-art art-glow" aria-hidden="true">
+            <span class="badge-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="3" fill="none" stroke="white" stroke-width="1.6"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="feature-body">
+            <h3>Aprendo y lo construyo</h3>
+            <ul>
+            <li>Educación y herramientas para compartir</li>
+            <li>IA para usarla y también para armarla</li>
+            <li>Lo que pruebo, lo cuento</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="studio" id="proyectos" data-theme="dark">
+      <div class="studio-intro">
+        <h2>Proyectos distintos. Cada uno dejó una lección.</h2>
+        <a class="btn-light" href="#contacto">Hablemos de uno</a>
+      </div>
+
+      <div class="studio-stage">
+        <div class="shards" aria-hidden="true"></div>
+        <div class="studio-ui">
+          <div class="ui-top">
+            <span class="dot"></span>
+            <strong>OBRA</strong>
+            <span class="ui-chip">Cinco historias</span>
+          </div>
+          <p class="ui-label" data-studio-label>Dónde</p>
+          <p class="ui-value" data-studio-value>Quindío</p>
+          <p class="ui-sub" data-studio-sub>alcaldía y entidades públicas</p>
+          <svg class="ui-chart" viewBox="0 0 560 140" data-studio-chart>
+            <path d="M0 100 C40 88 80 70 120 78 C170 88 210 40 270 52 C320 64 360 28 420 44 C470 58 510 22 560 16" fill="none" stroke="#ff8ec8" stroke-width="2.4"/>
+          </svg>
+        </div>
+        <div class="studio-copy">
+          <p class="brand-mini">Intraweb</p>
+          <h3 data-studio-headline>
+            <span class="is-hot">Gestión documental</span>
+            <span>que ya se usa</span>
+            <span>en la alcaldía</span>
+            <span>y en entidades públicas del Quindío.</span>
+          </h3>
+          <a class="text-link" href="#contacto">Contarme el tuyo <span aria-hidden="true">›</span></a>
+        </div>
+      </div>
+
+      <div class="studio-tabs" role="tablist">
+        <button class="is-active" role="tab" aria-selected="true" data-tab="intraweb">Intraweb</button>
+        <button role="tab" aria-selected="false" data-tab="epa">Mantenimientos EPA</button>
+        <button role="tab" aria-selected="false" data-tab="ia">IA en el desarrollo</button>
+        <button role="tab" aria-selected="false" data-tab="google">Integraciones con Google</button>
+        <button role="tab" aria-selected="false" data-tab="cursos">Formación digital</button>
+      </div>
+
+      <div class="for-band" id="herramientas">
+        <h3>Con</h3>
+        <div class="marquee marquee-slow">
+          <div class="marquee-track">
+            <p>PHP · Java · JavaScript · Laravel · Vue.js · Ionic · HTML · CSS · AWS · Azure · Linux · Git · WordPress · Scrum · y lo que siga saliendo ·</p>
+            <p aria-hidden="true">PHP · Java · JavaScript · Laravel · Vue.js · Ionic · HTML · CSS · AWS · Azure · Linux · Git · WordPress · Scrum · y lo que siga saliendo ·</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission" id="mirada" data-theme="dark">
+      <h2>No quiero hacer tecnología por hacer tecnología.</h2>
+    </section>
+
+    <section class="network" id="formacion" data-theme="dark">
+      <div class="network-copy">
+        <h3 data-region-name>Norteamérica</h3>
+        <ul class="venues" data-venues></ul>
+        <p class="more" data-region-more></p>
+        <button class="see-all" type="button" data-see-all>Ver todos</button>
+      </div>
+      <div class="globe-wrap">
+        <canvas id="globe" width="720" height="720" aria-label="Gráfico decorativo"></canvas>
+      </div>
+      <div class="network-nav">
+        <button type="button" data-region-prev aria-label="Región anterior">‹</button>
+        <button type="button" data-region-next aria-label="Región siguiente">›</button>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto" data-theme="ice">
+      <div class="contact-art" aria-hidden="true"></div>
+      <div class="contact-card">
+        <p class="eyebrow dark">Quindío, Colombia</p>
+        <h2>¿Hablamos?</h2>
+        <p class="contact-lead">Un proyecto, una idea o una pregunta sobre tecnología. No tengo todas las respuestas. Sí puedo pensarlas contigo. <a href="mailto:ejgonzalez971@gmail.com">ejgonzalez971@gmail.com</a></p>
+        <form class="contact-form" novalidate>
+          <label>Nombre <input name="nombre" type="text" required placeholder="Tu nombre" /></label>
+          <label>Correo <input name="correo" type="email" required placeholder="tu@correo.com" /></label>
+          <label>Mensaje <textarea name="mensaje" rows="3" required placeholder="Tengo una idea..."></textarea></label>
+          <button type="submit">Enviar</button>
+          <p class="form-note" data-form-note role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-theme="ice">
+    <div class="footer-panel">
+      <div>
+        <p class="col-label">Erika González</p>
+        <a class="login-pill" href="#contacto">Escribir</a>
+      </div>
+      <div>
+        <p class="col-label">Recorrido</p>
+        <a href="#sobre">Sobre mí</a>
+        <a href="#formacion">Formación</a>
+        <a href="#mirada">Mirada</a>
+      </div>
+      <div>
+        <p class="col-label">Oficio</p>
+        <a href="#hago">Qué hago</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#herramientas">Herramientas</a>
+      </div>
+      <div>
+        <p class="col-label">Ahora</p>
+        <a href="#ecosistema">Ecosistema de IAs</a>
+        <a href="mailto:ejgonzalez971@gmail.com">ejgonzalez971@gmail.com</a>
+        <a href="#contacto">Quindío, Colombia</a>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>Ingeniera de Sistemas. Tecnología, proyectos e IA. Construyendo, aprendiendo y probando. Actualmente: en construcción.</p>
+      <p>© Erika González</p>
+    </div>
+    <div class="ai-credit">
+      <p>Esta página web fue desarrollada con IA.</p>
+      <ul class="ai-logos">
+        <li>
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 27 10.2v11.6L16 28 5 21.8V10.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 16 27 10.2M16 16 5 10.2M16 16v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          Cursor
+        </li>
+        <li>
+          <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="gemini" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4b8bff"/><stop offset=".55" stop-color="#c084fc"/><stop offset="1" stop-color="#ff6eb4"/></linearGradient></defs><path fill="url(#gemini)" d="M16 2.2c.7 6.2 4.4 9.9 10.6 10.6-6.2.7-9.9 4.4-10.6 10.6-.7-6.2-4.4-9.9-10.6-10.6C11.6 12.1 15.3 8.4 16 2.2Z"/></svg>
+          Gemini
+        </li>
+        <li>
+          <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20.5 9.2a7.2 7.2 0 1 0 0 13.6 5.4 5.4 0 1 1 0-13.6Z" fill="currentColor"/></svg>
+          Grok
+        </li>
+      </ul>
+      <p class="ai-note">Mis IAs favoritas.</p>
+    </div>
+  </footer>
+
+  <aside class="promo" data-promo>
+    <button class="promo-close" type="button" aria-label="Cerrar">×</button>
+    <div class="promo-chart" aria-hidden="true">
+      <p>En construcción</p>
+      <svg viewBox="0 0 280 90">
+        <path d="M0 70 C30 68 40 40 70 48 C100 56 120 20 150 30 C180 40 200 18 230 22 C250 24 265 10 280 8" fill="none" stroke="#ff7ad9" stroke-width="2"/>
+      </svg>
+    </div>
+    <p>Un ecosistema de IAs para el día a día. Apenas empieza.</p>
+    <a href="#ecosistema">Ver el experimento <span aria-hidden="true">›</span></a>
+  </aside>
+
+  <script src="js/main.js?v=26"></script>
+</body>
+</html>
